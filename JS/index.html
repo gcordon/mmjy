@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 20000px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        它的this指向监听器所在的 DOM 元素：
+    -->
+    <button onclick="alert(this.tagName.toLowerCase());">
+        Show this
+    </button>
+
+    <!--
+        在这种情况下，没有设置内部函数的 this，所以它指向 global/window 对象
+    -->
+    <button onclick="alert(  (function(){return this})()  );">
+        Show inner this
+    </button>
+
+      
+    <script>
+    const log = console.log.bind(console)
+    </script>
+    <!-- <script src="./1-变量/变量提升-1.js"></script>
+    <script src="./1-变量/块级作用域-2.js"></script>
+    <script src="./1-变量/变量再重新赋值-3.js"></script> -->
+
+
+    <!-- <script src="./2-函数/1-普通函数.js"></script>
+    <script src="./2-函数/2-apply、bind.js"></script> -->
+
+    <!-- <script src="./3-this/1-this.js"></script> -->
+
+    <!-- <script src="./5-防抖、节流/1-防抖、节流使用.js"></script> -->
+
+    <!-- <script src="./6-new/1-new.js"></script> -->
+
+    <!-- <script src="./7-类型判断/1-统一.js"></script> -->
+
+    <!-- <script src="./0-其他/2-toString.js"></script> -->
+
+    <script src="./8-同步和异步和async/2-async-await.js"></script>
+    <!-- <script src="./8-同步和异步和async/3-复杂async.js"></script> -->
+
+</body>
+</html>
